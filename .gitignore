@@ -1,0 +1,17 @@
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
+*.suo
+*.user
+
+# Session reports
+session-report-*.html
+
+# Logs / temp
+*.log
+*.tmp

@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Get-ChildItem -Recurse -Force)",
+      "Bash(Select-Object FullName)",
+      "Bash(ConvertTo-Json)",
+      "WebFetch(domain:hhns.co.kr)",
+      "WebFetch(domain:www.mjc04.com)",
+      "WebFetch(domain:www.xn--or3b2ng5e4zj.com)",
+      "WebFetch(domain:nusu1111.com)",
+      "WebFetch(domain:blog.naver.com)",
+      "PowerShell(Set-Location \"C:\\\\Users\\\\junhy\\\\Documents\\\\GitHub\\\\myeongdong-plumbing\"; Get-ChildItem -Path . -Depth 0 -Force | Where-Object { -not $_.Name.StartsWith\\('.'\\) })",
+      "WebFetch(domain:m.blog.naver.com)",
+      "Bash(python -m http.server 8080)"
+    ]
+  }
+}
