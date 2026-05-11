@@ -280,6 +280,80 @@ button { cursor: pointer; border: none; background: none; }
 .slogan-bar strong { font-weight: 700; }
 
 /* ================================================================
+   GUARANTEE BAR
+   ================================================================ */
+.guarantee-bar {
+  background: #F0FDF4;
+  border-top: 1px solid #BBF7D0;
+  border-bottom: 1px solid #BBF7D0;
+  padding: 24px 0;
+}
+
+.guarantee-items {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.guarantee-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.g-icon {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  background: #16A34A;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.guarantee-item strong {
+  display: block;
+  font-size: 18px;
+  font-weight: 700;
+  color: #14532D;
+  margin-bottom: 2px;
+}
+
+.guarantee-item span {
+  font-size: 14px;
+  color: #4B7A5A;
+}
+
+.g-divider {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .guarantee-items {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+  }
+  .guarantee-item {
+    flex: 1;
+    max-width: 360px;
+    justify-content: center;
+  }
+  .g-divider {
+    display: block;
+    width: 1px;
+    height: 48px;
+    background: #86EFAC;
+    flex-shrink: 0;
+  }
+}
+
+/* ================================================================
    SECTIONS
    ================================================================ */
 .section { padding: 72px 0; }
