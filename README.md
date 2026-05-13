@@ -1,6 +1,6 @@
-# 명동수도설비 홈페이지
+# 바른누수센터 홈페이지
 
-서울 전지역 누수탐지·배관수리 전문업체 **명동수도설비**의 비즈니스 홈페이지.
+서울 전지역 누수탐지·배관수리 전문업체 **바른누수센터**의 비즈니스 홈페이지.
 
 ---
 
@@ -63,7 +63,7 @@ git push origin main
 ```
 
 GitHub → Settings → Pages → Branch: main / root → Save  
-배포 주소: `https://la2yness.github.io/myeongdong-plumbing/`
+배포 주소: `https://la2yness.github.io/barun-plumbing/`
 
 ### todo: 도메인 확보 후 커스텀 도메인 연결
 
