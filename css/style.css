@@ -4,21 +4,24 @@
    ================================================================ */
 
 :root {
-  --blue:        #1A56A0;
-  --blue-dark:   #0D2E5E;
-  --blue-light:  #EEF3FB;
+  --blue:        #1565C0;
+  --blue-dark:   #0D1F5C;
+  --blue-light:  #DBEAFE;
+  --cyan:        #0EA5E9;
+  --cyan-dark:   #0284C7;
+  --cyan-light:  #E0F2FE;
   --orange:      #E85D04;
   --orange-dark: #C04A00;
   --orange-light:#FFF3EE;
   --text:        #1A1A1A;
   --muted:       #5A6070;
-  --border:      #DDE3EE;
+  --border:      #C8D6EE;
   --white:       #FFFFFF;
-  --off-white:   #F4F7FC;
+  --off-white:   #F0F5FF;
   --radius:      12px;
   --radius-sm:   8px;
-  --shadow:      0 2px 16px rgba(26,86,160,.10);
-  --shadow-lg:   0 8px 40px rgba(26,86,160,.14);
+  --shadow:      0 2px 16px rgba(13,31,92,.12);
+  --shadow-lg:   0 8px 40px rgba(13,31,92,.16);
   --font:        'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif;
   --trans:       .2s ease;
 }
@@ -150,7 +153,7 @@ button { cursor: pointer; border: none; background: none; }
 .hero {
   position: relative;
   padding: 120px 0 80px;
-  background: linear-gradient(160deg, var(--blue-dark) 0%, #163E7A 60%, var(--blue) 100%);
+  background: linear-gradient(160deg, #0D1F5C 0%, #1A3A8F 55%, #1565C0 100%);
   color: var(--white);
   overflow: hidden;
   margin-top: 64px;
@@ -268,7 +271,7 @@ button { cursor: pointer; border: none; background: none; }
    SLOGAN BAR
    ================================================================ */
 .slogan-bar {
-  background: var(--orange);
+  background: linear-gradient(90deg, var(--blue-dark) 0%, var(--cyan-dark) 100%);
   padding: 18px 0;
 }
 .slogan-bar p {
@@ -461,7 +464,7 @@ button { cursor: pointer; border: none; background: none; }
   flex-shrink: 0;
   width: 44px;
   height: 44px;
-  background: var(--blue);
+  background: linear-gradient(135deg, var(--blue) 0%, var(--cyan-dark) 100%);
   color: var(--white);
   border-radius: 10px;
   display: flex;
@@ -508,7 +511,7 @@ button { cursor: pointer; border: none; background: none; }
 .step-circle {
   width: 52px;
   height: 52px;
-  background: var(--orange);
+  background: linear-gradient(135deg, var(--cyan) 0%, var(--cyan-dark) 100%);
   color: var(--white);
   border-radius: 50%;
   display: flex;
@@ -517,6 +520,7 @@ button { cursor: pointer; border: none; background: none; }
   font-size: 22px;
   font-weight: 900;
   margin: 0 auto 12px;
+  box-shadow: 0 4px 12px rgba(14,165,233,.35);
 }
 
 .process-step h3 {
@@ -532,7 +536,7 @@ button { cursor: pointer; border: none; background: none; }
 }
 
 .process-arrow {
-  color: var(--orange);
+  color: var(--cyan);
   transform: rotate(90deg);
   padding: 4px 0;
 }
@@ -680,6 +684,28 @@ button { cursor: pointer; border: none; background: none; }
 .contact-note {
   font-size: 14px;
   color: rgba(255,255,255,.55);
+}
+
+.kakao-qr {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  margin-bottom: 12px;
+}
+.kakao-qr img {
+  width: 130px;
+  height: 130px;
+  border-radius: var(--radius);
+  background: var(--white);
+  padding: 10px;
+  box-shadow: 0 4px 20px rgba(0,0,0,.25);
+}
+.kakao-qr p {
+  font-size: 13px;
+  color: rgba(255,255,255,.6);
+  letter-spacing: .01em;
 }
 
 /* ================================================================
