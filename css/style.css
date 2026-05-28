@@ -195,10 +195,9 @@ button { cursor: pointer; border: none; background: none; }
   content: '';
   position: absolute;
   inset: 0;
-  background: url('../images/gallery/pipe-texture.jpg') 70% center / cover no-repeat;
-  opacity: 0.15;
+  background: url('../images/main.jpg') center center / cover no-repeat;
+  opacity: 0.08;
   z-index: 0;
-  mix-blend-mode: overlay;
 }
 
 .hero-content { position: relative; z-index: 1; }
@@ -926,6 +925,12 @@ button { cursor: pointer; border: none; background: none; }
   .header-phone { display: flex; }
 
   .hero h1 { font-size: 64px; }
+  .hero::before {
+    background-position: right center;
+    opacity: 0.7;
+    -webkit-mask-image: linear-gradient(to right, transparent 35%, rgba(0,0,0,.5) 52%, black 68%);
+    mask-image: linear-gradient(to right, transparent 35%, rgba(0,0,0,.5) 52%, black 68%);
+  }
 
   .section { padding: 88px 0; }
   .section-head h2 { font-size: 42px; }
