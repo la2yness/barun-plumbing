@@ -3,6 +3,36 @@
    Mobile-first. Breakpoints: 768px (tablet), 1024px (desktop)
    ================================================================ */
 
+/* ----------------------------------------------------------------
+   FONT SIZE ORIGINALS (되돌릴 때 참고)
+   hero h1:            32px / 44px(768) / 54px(1024)
+   section-head h2:    28px / 36px(1024)
+   section-head p:     16px
+   service-card h3:    20px
+   service-card p/li:  14px
+   feat-body h3:       16px
+   feat-body p:        14px
+   process-step h3:    17px
+   process-step p:     14px
+   trust-item strong:  22px
+   trust-item span:    12px
+   guarantee strong:   18px
+   price-amount:       34px
+   price-card h3:      17px
+   price-card p:       14px
+   hero-point strong:  14px / 15px(768)
+   hero-point span:    12px(768)
+   contact h2:         28px / 36px(1024)
+   contact-sub:        15px
+   contact-btn-num:    18px
+   as-content h3:      18px
+   as-content strong:  15px
+   blog-text h2:       22px
+   blog-text p:        15px
+   area-block h3:      18px
+   slogan-bar p:       15px
+   ---------------------------------------------------------------- */
+
 :root {
   --blue:        #1565C0;
   --blue-dark:   #0D1F5C;
@@ -187,7 +217,7 @@ button { cursor: pointer; border: none; background: none; }
 }
 
 .hero h1 {
-  font-size: 32px;
+  font-size: 36px;
   font-weight: 900;
   line-height: 1.3;
   margin-bottom: 8px;
@@ -224,7 +254,7 @@ button { cursor: pointer; border: none; background: none; }
 .hero-point svg { flex-shrink: 0; color: #FFB347; }
 .hero-point strong {
   display: block;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 700;
   color: var(--white);
   line-height: 1.3;
@@ -318,7 +348,7 @@ button { cursor: pointer; border: none; background: none; }
   padding: 18px 0;
 }
 .slogan-bar p {
-  font-size: 15px;
+  font-size: 17px;
   color: var(--white);
   text-align: center;
   line-height: 1.6;
@@ -363,14 +393,14 @@ button { cursor: pointer; border: none; background: none; }
 
 .guarantee-item strong {
   display: block;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 700;
   color: #14532D;
   margin-bottom: 2px;
 }
 
 .guarantee-item span {
-  font-size: 14px;
+  font-size: 15px;
   color: #4B7A5A;
 }
 
@@ -411,14 +441,14 @@ button { cursor: pointer; border: none; background: none; }
   margin-bottom: 48px;
 }
 .section-head h2 {
-  font-size: 28px;
+  font-size: 30px;
   font-weight: 900;
   color: var(--blue-dark);
   margin-bottom: 10px;
   letter-spacing: -.02em;
 }
 .section-head p {
-  font-size: 16px;
+  font-size: 17px;
   color: var(--muted);
 }
 
@@ -456,13 +486,13 @@ button { cursor: pointer; border: none; background: none; }
 .svc-icon.orange { background: var(--orange-light); color: var(--orange); }
 
 .service-card h3 {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 700;
   color: var(--blue-dark);
   margin-bottom: 8px;
 }
 .service-card > p {
-  font-size: 14px;
+  font-size: 15px;
   color: var(--muted);
   margin-bottom: 14px;
   line-height: 1.55;
@@ -473,7 +503,7 @@ button { cursor: pointer; border: none; background: none; }
   gap: 6px;
 }
 .service-card li {
-  font-size: 14px;
+  font-size: 15px;
   color: var(--text);
   padding-left: 14px;
   position: relative;
@@ -520,14 +550,14 @@ button { cursor: pointer; border: none; background: none; }
 }
 
 .feat-body h3 {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 700;
   color: var(--blue-dark);
   margin-bottom: 6px;
   line-height: 1.4;
 }
 .feat-body p {
-  font-size: 14px;
+  font-size: 15px;
   color: var(--muted);
   line-height: 1.65;
 }
@@ -568,13 +598,13 @@ button { cursor: pointer; border: none; background: none; }
 }
 
 .process-step h3 {
-  font-size: 17px;
+  font-size: 19px;
   font-weight: 700;
   color: var(--blue-dark);
   margin-bottom: 8px;
 }
 .process-step p {
-  font-size: 14px;
+  font-size: 15px;
   color: var(--muted);
   line-height: 1.6;
 }
@@ -605,7 +635,7 @@ button { cursor: pointer; border: none; background: none; }
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 700;
   color: var(--blue-dark);
   margin-bottom: 18px;
@@ -646,13 +676,13 @@ button { cursor: pointer; border: none; background: none; }
   padding: 32px 28px;
 }
 .blog-text h2 {
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 700;
   color: var(--blue-dark);
   margin-bottom: 8px;
 }
 .blog-text p {
-  font-size: 15px;
+  font-size: 16px;
   color: var(--muted);
   line-height: 1.65;
 }
@@ -667,13 +697,13 @@ button { cursor: pointer; border: none; background: none; }
   color: var(--white);
 }
 .contact-section h2 {
-  font-size: 28px;
+  font-size: 30px;
   font-weight: 900;
   margin-bottom: 12px;
   letter-spacing: -.02em;
 }
 .contact-sub {
-  font-size: 15px;
+  font-size: 16px;
   color: rgba(255,255,255,.75);
   margin-bottom: 36px;
 }
@@ -720,7 +750,7 @@ button { cursor: pointer; border: none; background: none; }
   word-break: keep-all;
 }
 .contact-btn-num {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 900;
   display: block;
   text-align: left;
@@ -866,9 +896,9 @@ button { cursor: pointer; border: none; background: none; }
   .nav-toggle { display: none; }
 
   .hero { padding: 140px 0 100px; }
-  .hero h1 { font-size: 44px; }
-  .hero-point strong { font-size: 15px; }
-  .hero-point span { display: block; font-size: 12px; color: rgba(255,255,255,.72); margin-top: 3px; line-height: 1.35; }
+  .hero h1 { font-size: 50px; }
+  .hero-point strong { font-size: 16px; }
+  .hero-point span { display: block; font-size: 13px; color: rgba(255,255,255,.72); margin-top: 3px; line-height: 1.35; }
 
   .service-grid { grid-template-columns: repeat(2, 1fr); }
   .features-grid { grid-template-columns: repeat(2, 1fr); }
@@ -895,10 +925,10 @@ button { cursor: pointer; border: none; background: none; }
   .container { padding: 0 32px; }
   .header-phone { display: flex; }
 
-  .hero h1 { font-size: 54px; }
+  .hero h1 { font-size: 64px; }
 
   .section { padding: 88px 0; }
-  .section-head h2 { font-size: 36px; }
+  .section-head h2 { font-size: 42px; }
 
   .service-grid { grid-template-columns: repeat(3, 1fr); gap: 24px; }
   .features-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
@@ -913,7 +943,7 @@ button { cursor: pointer; border: none; background: none; }
   .process-step { flex: 1; min-width: 0; max-width: none; }
   .process-arrow { transform: rotate(0deg); align-self: center; flex-shrink: 0; }
 
-  .contact-section h2 { font-size: 36px; }
+  .contact-section h2 { font-size: 42px; }
 }
 
 /* ================================================================
@@ -932,14 +962,14 @@ button { cursor: pointer; border: none; background: none; }
 .trust-item { text-align: center; }
 .trust-item strong {
   display: block;
-  font-size: 22px;
+  font-size: 26px;
   font-weight: 900;
   color: #FFB347;
   line-height: 1.2;
   margin-bottom: 3px;
 }
 .trust-item span {
-  font-size: 12px;
+  font-size: 13px;
   color: rgba(255,255,255,.7);
 }
 .trust-sep { display: none; }
@@ -1095,7 +1125,7 @@ button { cursor: pointer; border: none; background: none; }
   letter-spacing: .04em;
 }
 .price-amount {
-  font-size: 34px;
+  font-size: 38px;
   font-weight: 900;
   color: var(--blue-dark);
   line-height: 1.2;
@@ -1110,12 +1140,12 @@ button { cursor: pointer; border: none; background: none; }
   letter-spacing: normal;
 }
 .price-card h3 {
-  font-size: 17px;
+  font-size: 19px;
   font-weight: 700;
   color: var(--blue-dark);
   margin-bottom: 8px;
 }
-.price-card p { font-size: 14px; color: var(--muted); line-height: 1.65; }
+.price-card p { font-size: 15px; color: var(--muted); line-height: 1.65; }
 .price-card p strong { color: var(--orange); font-weight: 700; }
 .price-note {
   display: flex;
@@ -1156,19 +1186,19 @@ button { cursor: pointer; border: none; background: none; }
   justify-content: center;
 }
 .as-content h3 {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 700;
   color: var(--blue-dark);
   margin-bottom: 10px;
 }
 .as-content p {
-  font-size: 14px;
+  font-size: 15px;
   color: var(--muted);
   line-height: 1.75;
   margin-bottom: 8px;
 }
 .as-content p:last-child { margin-bottom: 0; }
-.as-content strong { color: var(--blue-dark); font-size: 15px; font-weight: 700; }
+.as-content strong { color: var(--blue-dark); font-size: 16px; font-weight: 700; }
 @media (min-width: 768px) {
   .as-inner { flex-direction: row; align-items: flex-start; }
 }
