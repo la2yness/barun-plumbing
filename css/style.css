@@ -165,7 +165,7 @@ button { cursor: pointer; border: none; background: none; }
   content: '';
   position: absolute;
   inset: 0;
-  background: url('../images/works/4.jpg') center / cover no-repeat;
+  background: url('../images/works/4.jpg') 70% center / cover no-repeat;
   opacity: 0.15;
   z-index: 0;
   mix-blend-mode: overlay;
@@ -1015,13 +1015,13 @@ button { cursor: pointer; border: none; background: none; }
   opacity: 1;
   transition: opacity var(--trans);
 }
-@media (hover: hover) {
+@media (hover: hover) and (pointer: fine) {
   .gallery-overlay { opacity: 0; }
   .gallery-item:hover .gallery-overlay { opacity: 1; }
 }
 .gallery-overlay span {
   display: block;
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 600;
   color: rgba(255,255,255,.95);
   text-align: center;
@@ -1030,7 +1030,7 @@ button { cursor: pointer; border: none; background: none; }
 .gallery-more { text-align: center; margin-top: 32px; }
 @media (min-width: 600px) {
   .gallery-grid { grid-template-columns: repeat(3, 1fr); gap: 12px; }
-  .gallery-overlay span { font-size: 12px; }
+  .gallery-overlay span { font-size: 14px; }
 }
 @media (min-width: 1024px) {
   .gallery-grid { gap: 14px; }
