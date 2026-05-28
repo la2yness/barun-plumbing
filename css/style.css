@@ -219,7 +219,7 @@ button { cursor: pointer; border: none; background: none; }
   font-size: 36px;
   font-weight: 900;
   line-height: 1.3;
-  margin-bottom: 8px;
+  margin-bottom: 24px;
   letter-spacing: -.02em;
 }
 .hero h1 em {
@@ -796,7 +796,10 @@ button { cursor: pointer; border: none; background: none; }
   display: flex;
   flex-direction: column;
   gap: 32px;
-  padding: 96px 20px 56px;
+  padding: 56px 20px 40px;
+}
+@media (min-width: 1440px) {
+  .footer-inner { padding: 96px 20px 64px; }
 }
 .footer-logo {
   font-size: 20px;
@@ -926,10 +929,11 @@ button { cursor: pointer; border: none; background: none; }
 
   .hero h1 { font-size: 64px; }
   .hero::before {
-    background-position: right top;
-    opacity: 0.75;
-    -webkit-mask-image: linear-gradient(to right, transparent 45%, rgba(0,0,0,.5) 60%, black 75%);
-    mask-image: linear-gradient(to right, transparent 45%, rgba(0,0,0,.5) 60%, black 75%);
+    left: 50%;
+    background: url('../images/main.jpg') center top / cover no-repeat;
+    opacity: 0.85;
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 18%);
+    mask-image: linear-gradient(to right, transparent 0%, black 18%);
   }
 
   .section { padding: 88px 0; }
@@ -1104,7 +1108,6 @@ button { cursor: pointer; border: none; background: none; }
   display: flex;
   gap: 14px;
   overflow-x: auto;
-  scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
   padding-bottom: 4px;
 }
@@ -1112,13 +1115,10 @@ button { cursor: pointer; border: none; background: none; }
 .review-scroll img {
   flex-shrink: 0;
   width: 260px;
-  aspect-ratio: 3 / 4;
-  object-fit: cover;
-  object-position: top;
+  height: auto;
   border-radius: var(--radius);
   border: 1px solid var(--border);
   box-shadow: var(--shadow);
-  scroll-snap-align: start;
 }
 .review-arrow {
   display: none;
@@ -1139,8 +1139,8 @@ button { cursor: pointer; border: none; background: none; }
   transition: background var(--trans);
 }
 .review-arrow:hover { background: var(--blue-light); }
-.review-arrow-prev { left: -22px; }
-.review-arrow-next { right: -22px; }
+.review-arrow-prev { left: 8px; }
+.review-arrow-next { right: 8px; }
 @media (hover: hover) and (pointer: fine) {
   .review-arrow { display: flex; }
 }
