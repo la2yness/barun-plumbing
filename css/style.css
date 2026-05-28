@@ -1139,8 +1139,8 @@ button { cursor: pointer; border: none; background: none; }
   transition: background var(--trans);
 }
 .review-arrow:hover { background: var(--blue-light); }
-.review-arrow-prev { left: 8px; }
-.review-arrow-next { right: 8px; }
+.review-arrow-prev { left: -22px; }
+.review-arrow-next { right: -22px; }
 @media (hover: hover) and (pointer: fine) {
   .review-arrow { display: flex; }
 }
