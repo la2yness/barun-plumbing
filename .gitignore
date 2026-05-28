@@ -12,6 +12,9 @@ desktop.ini
 # Session reports
 session-report-*.html
 
+# Debug screenshots
+images/debug/
+
 # Logs / temp
 *.log
 *.tmp
