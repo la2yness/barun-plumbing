@@ -31,7 +31,8 @@
       "Bash(mv works/4.jpg  gallery/pipe-texture.jpg)",
       "Bash(mv works/5.jpg  gallery/acoustic-detect.jpg)",
       "Bash(git *)",
-      "PowerShell(Move-Item *)"
+      "PowerShell(Move-Item *)",
+      "Bash(python3 -c ' *)"
     ]
   }
 }

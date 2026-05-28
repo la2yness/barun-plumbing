@@ -1053,7 +1053,7 @@ button { cursor: pointer; border: none; background: none; }
   position: relative;
   border-radius: var(--radius-sm);
   overflow: hidden;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 3 / 4;
   background: var(--off-white);
 }
 .gallery-item img {
@@ -1096,24 +1096,53 @@ button { cursor: pointer; border: none; background: none; }
 /* ================================================================
    REVIEWS
    ================================================================ */
+.review-scroll-wrap {
+  position: relative;
+  margin-bottom: 36px;
+}
 .review-scroll {
   display: flex;
   gap: 14px;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
-  padding-bottom: 8px;
-  margin-bottom: 36px;
+  padding-bottom: 4px;
 }
 .review-scroll::-webkit-scrollbar { display: none; }
 .review-scroll img {
   flex-shrink: 0;
   width: 260px;
-  height: auto;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: top;
   border-radius: var(--radius);
   border: 1px solid var(--border);
   box-shadow: var(--shadow);
   scroll-snap-align: start;
+}
+.review-arrow {
+  display: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  box-shadow: var(--shadow);
+  color: var(--blue-dark);
+  cursor: pointer;
+  transition: background var(--trans);
+}
+.review-arrow:hover { background: var(--blue-light); }
+.review-arrow-prev { left: -22px; }
+.review-arrow-next { right: -22px; }
+@media (hover: hover) and (pointer: fine) {
+  .review-arrow { display: flex; }
 }
 .review-more { text-align: center; }
 

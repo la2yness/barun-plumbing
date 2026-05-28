@@ -56,6 +56,18 @@
     observer.observe(el);
   });
 
+  // Review scroll arrows
+  var reviewScroll = document.querySelector('.review-scroll');
+  if (reviewScroll) {
+    var cardStep = 274; // 260px card + 14px gap
+    document.querySelector('.review-arrow-prev').addEventListener('click', function () {
+      reviewScroll.scrollBy({ left: -cardStep, behavior: 'smooth' });
+    });
+    document.querySelector('.review-arrow-next').addEventListener('click', function () {
+      reviewScroll.scrollBy({ left: cardStep, behavior: 'smooth' });
+    });
+  }
+
   // Desktop: copy phone number to clipboard on click
   if (window.matchMedia('(pointer: fine)').matches) {
     var toast = document.createElement('div');
