@@ -1,12 +1,15 @@
 const { chromium } = require('playwright');
 (async () => {
   const browser = await chromium.launch({ channel: 'chrome' }).catch(() => chromium.launch());
-  const page = await browser.newPage();
-  await page.setViewportSize({ width: 1280, height: 700 });
-  await page.goto('http://localhost:8787/', { waitUntil: 'load' });
-  await page.waitForTimeout(500);
-  const el = await page.$('.hero');
-  await el.screenshot({ path: 'images/debug/hero-bg.png' });
+  for (const [w, h, name] of [[375,812,'m'], [768,1024,'t'], [1280,800,'d']]) {
+    const page = await browser.newPage();
+    await page.setViewportSize({ width: w, height: h });
+    await page.goto('http://localhost:8787/', { waitUntil: 'load' });
+    await page.waitForTimeout(800);
+    const hero = await page.$('.hero');
+    await hero.screenshot({ path: `images/debug/hero-new-${name}.png` });
+    console.log(name);
+    await page.close();
+  }
   await browser.close();
-  console.log('done');
 })().catch(e => { console.error(e.message); process.exit(1); });

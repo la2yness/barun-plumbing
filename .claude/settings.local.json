@@ -24,7 +24,13 @@
       "WebFetch(domain:localhost)",
       "Bash(npx playwright *)",
       "Bash(node -e ' *)",
-      "Bash(npm install *)"
+      "Bash(npm install *)",
+      "Bash(mkdir -p gallery)",
+      "Bash(mv works/1.jpg  gallery/thermal-leak.jpg)",
+      "Bash(mv works/3.jpg  gallery/boiler-thermal.jpg)",
+      "Bash(mv works/4.jpg  gallery/pipe-texture.jpg)",
+      "Bash(mv works/5.jpg  gallery/acoustic-detect.jpg)",
+      "Bash(git *)"
     ]
   }
 }
