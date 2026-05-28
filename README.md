@@ -20,37 +20,59 @@
 
 - **HTML5 / CSS3 / Vanilla JS** — 빌드 툴 없음, 정적 사이트
 - **GitHub Pages** — 무료 호스팅, HTTPS 자동
-- SEO: JSON-LD (LocalBusiness 스키마), OG 태그, sitemap.xml
+- SEO: JSON-LD (LocalBusiness 스키마), OG 태그
 
-CMS·프레임워크 미사용. 네이버 블로그를 별도 운영하여 워드프레스 불필요.
+CMS·프레임워크 미사용.
 
 ---
 
-## 구조
+## 파일 구조
 
 ```
-├── index.html        # 단일 페이지 (전체 콘텐츠)
-├── css/style.css     # 모바일 퍼스트 반응형 스타일
-├── js/main.js        # 헤더 스크롤, 모바일 메뉴, 스크롤 애니메이션
-├── sitemap.xml
-├── robots.txt
-└── .nojekyll         # GitHub Pages Jekyll 비활성화
+├── index.html              # 단일 페이지 (전체 콘텐츠)
+├── css/style.css           # 모바일 퍼스트 반응형 스타일
+├── js/main.js              # 헤더 스크롤, 모바일 메뉴, 애니메이션, 클립보드
+├── favicon.ico             # 브라우저 탭 아이콘 (32×32)
+├── apple-touch-icon.png    # iOS 홈화면 아이콘 (180×180)
+├── images/
+│   ├── main.jpg            # 히어로 배경사진 (작업 현장)
+│   ├── icon-192.png        # 헤더 로고 + Android 아이콘
+│   ├── kakao-qr.png        # 카카오톡 오픈채팅 QR
+│   ├── gallery/            # 시공 현장 사진 9장
+│   └── reviews/            # 고객 후기 스크린샷 10장
 ```
 
 ---
 
 ## 페이지 구성
 
-1. **헤더** — 스티키, 전화번호 항상 노출
-2. **히어로** — 핵심 카피 + 전화/카카오 CTA
-3. **서비스** — 6개 카드 (누수탐지, 막힘, 배관, 위생기기, 욕실, 상가)
-4. **특장점** — 6가지 신뢰 포인트
-5. **진행과정** — 4단계 프로세스
-6. **서비스 지역** — 서울 25개 구 태그 + 경기 일부
-7. **블로그 연결** — 네이버 블로그 CTA
-8. **문의 CTA** — 전화 + 카카오톡 대형 버튼
-9. **푸터**
-10. **플로팅 전화버튼** — 모바일 고정 하단
+1. **헤더** — 스티키, 1024px+ 전화번호 노출 / 클릭 시 클립보드 복사 (데스크톱)
+2. **히어로** — 핵심 카피 + 3가지 어필포인트 카드 + 전화/카카오 CTA, 입장 애니메이션
+3. **보증 배너** — 현장 방문 원칙, 시공+점검 약속
+4. **신뢰 지표** — 월 실적·경력·장비·A/S 4가지 수치
+5. **서비스** — 6개 카드 (누수탐지, 막힘, 배관, 위생기기, 욕실, 상가)
+6. **시공 갤러리** — 현장 사진 9장 (3열 그리드, 모바일 호버 시 상시 표시)
+7. **고객 후기** — 숨은고수 리뷰 스크린샷 10장 가로 스크롤 (데스크톱 화살표 버튼)
+8. **작업 항목** — 공간별 6가지 항목 그리드
+9. **특장점** — 6가지 신뢰 포인트
+10. **진행과정** — 4단계 프로세스 (1024px+ 가로 배치)
+11. **요금 안내** — 출장비 0원 / 점검비 / 단순교체
+12. **서비스 지역** — 서울 25개 구 태그 + 경기 일부
+13. **A/S 보증** — 1년 무상 보증 안내
+14. **FAQ** — 7개 아코디언 (자주 묻는 질문)
+15. **문의 CTA** — 전화 + 카카오톡 + QR코드
+16. **푸터** — 업체 정보, 대표자, 이메일, 인스타그램
+17. **플로팅 버튼** — 카카오 + 전화 고정 하단
+
+---
+
+## 외부 연결
+
+| 채널 | 링크 |
+|---|---|
+| 숨은고수 리뷰 | `soomgo.com/profile/users/18574378` |
+| 카카오 오픈채팅 | `open.kakao.com/o/sPRMAewi` |
+| 인스타그램 | `instagram.com/md_nusoo` |
 
 ---
 
@@ -70,6 +92,7 @@ GitHub → Settings → Pages → Branch: main / root → Save
 1. Settings → Pages → Custom domain 입력
 2. Gabia DNS에 A 레코드 4개 추가 (`185.199.108~111.153`)
 3. CNAME: `www` → `la2yness.github.io`
+4. `index.html`의 `[도메인입력필요]` 2곳 교체 (og:url, JSON-LD url)
 
 ---
 
@@ -77,18 +100,32 @@ GitHub → Settings → Pages → Branch: main / root → Save
 
 | 수정 항목 | 파일 | 위치 |
 |---|---|---|
-| 전화번호 | `index.html` | `tel:` href 전체 |
+| 전화번호 | `index.html` | `tel:` href 전체 검색 |
 | 카카오 링크 | `index.html` | `open.kakao.com` href |
-| 도메인 | `index.html`, `sitemap.xml`, `robots.txt` | `[도메인입력필요]` |
+| 숨은고수 링크 | `index.html` | `soomgo.com` href |
+| 도메인 | `index.html` | `[도메인입력필요]` 검색 |
 | 서비스 내용 | `index.html` | `#services` 섹션 |
 | 색상 | `css/style.css` | `:root` CSS 변수 |
+| 폰트 사이즈 원본값 | `css/style.css` | 파일 상단 주석 참고 |
+| 후기 사진 추가 | `images/reviews/` | 파일 추가 후 `index.html` `#reviews` 섹션에 img 태그 추가 |
 
 ---
 
-## SEO 체크리스트
+## todo
 
 - [ ] 도메인 확정 후 `[도메인입력필요]` 전체 교체
+- [ ] `og:image` 대표 이미지 설정 (SNS 공유 시 썸네일)
+- [ ] 리뷰 사진 추가되면 `images/reviews/` 업데이트
 - [ ] 네이버 서치어드바이저 등록 + sitemap 제출
 - [ ] 네이버 스마트플레이스 등록
-- [ ] Google Search Console 등록
+- [ ] Google Search Console 등록 (도메인 연결 후)
 - [ ] 카카오맵 업체 등록
+
+---
+
+## SEO
+
+- JSON-LD LocalBusiness 스키마 적용 (`@type: LocalBusiness`)
+- OG 태그 (title, description, type, locale)
+- 모바일 퍼스트, `word-break: keep-all` 한국어 최적화
+- 이미지 `loading="lazy"`, `alt` 텍스트 전체 적용
