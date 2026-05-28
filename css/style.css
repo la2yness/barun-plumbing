@@ -81,19 +81,20 @@ button { cursor: pointer; border: none; background: none; }
 .main-nav ul { display: flex; align-items: center; gap: 4px; }
 .main-nav a {
   display: block;
-  padding: 8px 14px;
-  font-size: 15px;
+  padding: 7px 11px;
+  font-size: 14px;
   font-weight: 500;
   color: var(--text);
   border-radius: var(--radius-sm);
   transition: background var(--trans), color var(--trans);
+  white-space: nowrap;
 }
 .main-nav a:hover { background: var(--blue-light); color: var(--blue); }
 .main-nav .nav-cta {
   background: var(--blue);
   color: var(--white);
   border-radius: 20px;
-  padding: 8px 18px;
+  padding: 7px 16px;
 }
 .main-nav .nav-cta:hover { background: var(--blue-dark); }
 
@@ -102,13 +103,14 @@ button { cursor: pointer; border: none; background: none; }
   display: none;
   align-items: center;
   gap: 6px;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 700;
   color: var(--blue);
-  padding: 6px 14px;
-  border: 2px solid var(--blue);
-  border-radius: 20px;
+  padding: 7px 13px;
+  border-radius: var(--radius-sm);
+  background: var(--blue-light);
   transition: background var(--trans), color var(--trans);
+  white-space: nowrap;
 }
 .header-phone:hover { background: var(--blue); color: var(--white); }
 
@@ -234,6 +236,8 @@ button { cursor: pointer; border: none; background: none; }
   transition: background var(--trans), transform var(--trans), box-shadow var(--trans);
   border: 2px solid transparent;
   white-space: nowrap;
+  word-break: keep-all;
+  flex-shrink: 0;
 }
 .btn:active { transform: scale(.97); }
 
@@ -672,6 +676,8 @@ button { cursor: pointer; border: none; background: none; }
   opacity: .85;
   display: block;
   text-align: left;
+  white-space: nowrap;
+  word-break: keep-all;
 }
 .contact-btn-num {
   font-size: 20px;
@@ -757,28 +763,51 @@ button { cursor: pointer; border: none; background: none; }
 }
 
 /* ================================================================
-   FLOATING CALL BUTTON
+   FLOATING BUTTONS (듀얼 FAB)
    ================================================================ */
-.float-call {
+.float-btns {
   position: fixed;
   bottom: 24px;
   right: 20px;
   z-index: 90;
   display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.float-btn {
+  display: flex;
   align-items: center;
   gap: 8px;
+  padding: 12px 18px;
+  border-radius: 32px;
+  font-size: 14px;
+  font-weight: 700;
+  white-space: nowrap;
+  transition: transform var(--trans), box-shadow var(--trans);
+  text-decoration: none;
+}
+.float-btn:active { transform: scale(.97); }
+
+.float-kakao {
+  background: #FEE500;
+  color: #3A1D1D;
+  box-shadow: 0 3px 14px rgba(254,229,0,.45);
+}
+.float-kakao:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(254,229,0,.55);
+}
+
+.float-call {
   background: var(--orange);
   color: var(--white);
-  padding: 14px 20px;
-  border-radius: 32px;
-  font-size: 15px;
-  font-weight: 700;
   box-shadow: 0 4px 20px rgba(232,93,4,.45);
-  transition: transform var(--trans), box-shadow var(--trans);
   animation: float-pulse 3s ease-in-out infinite;
 }
 .float-call:hover {
-  transform: translateY(-3px);
+  transform: translateY(-2px);
   box-shadow: 0 8px 28px rgba(232,93,4,.55);
 }
 
