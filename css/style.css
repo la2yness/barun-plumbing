@@ -166,7 +166,7 @@ button { cursor: pointer; border: none; background: none; }
   position: absolute;
   inset: 0;
   background: url('../images/works/4.jpg') center / cover no-repeat;
-  opacity: 0.09;
+  opacity: 0.15;
   z-index: 0;
   mix-blend-mode: overlay;
 }
@@ -746,7 +746,7 @@ button { cursor: pointer; border: none; background: none; }
   display: flex;
   flex-direction: column;
   gap: 32px;
-  padding: 72px 20px 40px;
+  padding: 96px 20px 56px;
 }
 .footer-logo {
   font-size: 20px;
@@ -775,7 +775,7 @@ button { cursor: pointer; border: none; background: none; }
 
 .footer-copy {
   border-top: 1px solid rgba(255,255,255,.1);
-  padding: 16px 20px;
+  padding: 24px 20px;
 }
 .footer-copy p {
   font-size: 13px;
@@ -865,8 +865,6 @@ button { cursor: pointer; border: none; background: none; }
   .contact-btn { max-width: 320px; }
 
   .footer-inner { flex-direction: row; justify-content: space-between; align-items: flex-start; }
-
-  .price-cards { grid-template-columns: repeat(3, 1fr); }
 }
 
 /* ================================================================
@@ -1108,6 +1106,9 @@ button { cursor: pointer; border: none; background: none; }
 }
 .price-note svg { flex-shrink: 0; color: var(--cyan-dark); margin-top: 2px; }
 .price-note p { font-size: 14px; color: var(--muted); line-height: 1.65; }
+@media (min-width: 768px) {
+  .price-cards { grid-template-columns: repeat(3, 1fr); }
+}
 /* ================================================================
    A/S BAR
    ================================================================ */
