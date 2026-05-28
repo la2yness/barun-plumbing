@@ -843,7 +843,6 @@ button { cursor: pointer; border: none; background: none; }
 @media (min-width: 768px) {
   .main-nav { display: flex; }
   .nav-toggle { display: none; }
-  .header-phone { display: flex; }
 
   .hero { padding: 140px 0 100px; }
   .hero h1 { font-size: 44px; }
@@ -872,6 +871,7 @@ button { cursor: pointer; border: none; background: none; }
    ================================================================ */
 @media (min-width: 1024px) {
   .container { padding: 0 32px; }
+  .header-phone { display: flex; }
 
   .hero h1 { font-size: 54px; }
 

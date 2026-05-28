@@ -15,6 +15,10 @@ session-report-*.html
 # Debug screenshots
 images/debug/
 
+# Node
+node_modules/
+package-lock.json
+
 # Logs / temp
 *.log
 *.tmp
