@@ -30,7 +30,8 @@
       "Bash(mv works/3.jpg  gallery/boiler-thermal.jpg)",
       "Bash(mv works/4.jpg  gallery/pipe-texture.jpg)",
       "Bash(mv works/5.jpg  gallery/acoustic-detect.jpg)",
-      "Bash(git *)"
+      "Bash(git *)",
+      "PowerShell(Move-Item *)"
     ]
   }
 }

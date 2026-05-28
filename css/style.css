@@ -926,10 +926,10 @@ button { cursor: pointer; border: none; background: none; }
 
   .hero h1 { font-size: 64px; }
   .hero::before {
-    background-position: right center;
-    opacity: 0.7;
-    -webkit-mask-image: linear-gradient(to right, transparent 35%, rgba(0,0,0,.5) 52%, black 68%);
-    mask-image: linear-gradient(to right, transparent 35%, rgba(0,0,0,.5) 52%, black 68%);
+    background-position: right top;
+    opacity: 0.75;
+    -webkit-mask-image: linear-gradient(to right, transparent 45%, rgba(0,0,0,.5) 60%, black 75%);
+    mask-image: linear-gradient(to right, transparent 45%, rgba(0,0,0,.5) 60%, black 75%);
   }
 
   .section { padding: 88px 0; }
@@ -1092,6 +1092,30 @@ button { cursor: pointer; border: none; background: none; }
 @media (min-width: 1024px) {
   .gallery-grid { gap: 14px; }
 }
+
+/* ================================================================
+   REVIEWS
+   ================================================================ */
+.review-scroll {
+  display: flex;
+  gap: 14px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 8px;
+  margin-bottom: 36px;
+}
+.review-scroll::-webkit-scrollbar { display: none; }
+.review-scroll img {
+  flex-shrink: 0;
+  width: 260px;
+  height: auto;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  scroll-snap-align: start;
+}
+.review-more { text-align: center; }
 
 /* ================================================================
    PRICING
