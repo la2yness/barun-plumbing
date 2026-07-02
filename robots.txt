@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
 
-# TODO: [도메인입력필요]를 실제 도메인으로 교체하세요
-Sitemap: https://[도메인입력필요]/sitemap.xml
+Sitemap: https://nusoo6422.co.kr/sitemap.xml

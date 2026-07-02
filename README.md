@@ -12,7 +12,7 @@
 | 목적 | 신규 고객 유입 (전화 상담 전환) 및 검색엔진 노출 |
 | 주 타겟 | 30~60대 중장년층 서울·경기 거주자 |
 | 호스팅 | GitHub Pages |
-| 도메인 | 미정 (Gabia `.co.kr` 예정) |
+| 도메인 | `nusoo6422.co.kr` (Gabia) |
 
 ---
 
@@ -38,7 +38,7 @@ CMS·프레임워크 미사용.
 │   ├── main.jpg            # 히어로 배경사진 (작업 현장)
 │   ├── icon-192.png        # 헤더 로고 + Android 아이콘
 │   ├── kakao-qr.png        # 카카오톡 오픈채팅 QR
-│   ├── gallery/            # 시공 현장 사진 9장
+│   ├── gallery/            # 시공 현장 사진 12장
 │   └── reviews/            # 고객 후기 스크린샷 10장
 ```
 
@@ -51,7 +51,7 @@ CMS·프레임워크 미사용.
 3. **보증 배너** — 현장 방문 원칙, 시공+점검 약속
 4. **신뢰 지표** — 월 실적·경력·장비·A/S 4가지 수치
 5. **서비스** — 6개 카드 (누수탐지, 막힘, 배관, 위생기기, 욕실, 상가)
-6. **시공 갤러리** — 현장 사진 9장 (3열 그리드, 모바일 호버 시 상시 표시)
+6. **시공 갤러리** — 현장 사진 12장 (3열 그리드, 모바일 호버 시 상시 표시)
 7. **고객 후기** — 숨은고수 리뷰 스크린샷 10장 가로 스크롤 (데스크톱 화살표 버튼)
 8. **작업 항목** — 공간별 6가지 항목 그리드
 9. **특장점** — 6가지 신뢰 포인트
@@ -85,14 +85,7 @@ git push origin main
 ```
 
 GitHub → Settings → Pages → Branch: main / root → Save  
-배포 주소: `https://la2yness.github.io/barun-plumbing/`
-
-### todo: 도메인 확보 후 커스텀 도메인 연결
-
-1. Settings → Pages → Custom domain 입력
-2. Gabia DNS에 A 레코드 4개 추가 (`185.199.108~111.153`)
-3. CNAME: `www` → `la2yness.github.io`
-4. `index.html`의 `[도메인입력필요]` 3곳 교체 (og:url, og:image, JSON-LD url)
+배포 주소: `https://nusoo6422.co.kr` (커스텀 도메인 연결됨, GitHub Pages 기본 주소는 `https://la2yness.github.io/barun-plumbing/`)
 
 ---
 
@@ -103,7 +96,7 @@ GitHub → Settings → Pages → Branch: main / root → Save
 | 전화번호 | `index.html` | `tel:` href 전체 검색 |
 | 카카오 링크 | `index.html` | `open.kakao.com` href |
 | 숨은고수 링크 | `index.html` | `soomgo.com` href |
-| 도메인 | `index.html` | `[도메인입력필요]` 검색 |
+| 도메인 | `index.html` | `nusoo6422.co.kr` 전체 검색 |
 | 서비스 내용 | `index.html` | `#services` 섹션 |
 | 색상 | `css/style.css` | `:root` CSS 변수 |
 | 폰트 사이즈 원본값 | `css/style.css` | 파일 상단 주석 참고 |
@@ -113,9 +106,8 @@ GitHub → Settings → Pages → Branch: main / root → Save
 
 ## todo
 
-- [ ] 도메인 확정 후 `[도메인입력필요]` 전체 교체 (og:url, og:image, JSON-LD url)
-- [ ] 네이버 서치어드바이저 등록 + sitemap 제출 (도메인 연결 후)
-- [ ] Google Search Console 등록 (도메인 연결 후)
+- [ ] 네이버 서치어드바이저 등록 + sitemap 제출
+- [ ] Google Search Console 등록
 
 ---
 
