@@ -92,7 +92,7 @@ GitHub → Settings → Pages → Branch: main / root → Save
 1. Settings → Pages → Custom domain 입력
 2. Gabia DNS에 A 레코드 4개 추가 (`185.199.108~111.153`)
 3. CNAME: `www` → `la2yness.github.io`
-4. `index.html`의 `[도메인입력필요]` 2곳 교체 (og:url, JSON-LD url)
+4. `index.html`의 `[도메인입력필요]` 3곳 교체 (og:url, og:image, JSON-LD url)
 
 ---
 
@@ -113,13 +113,9 @@ GitHub → Settings → Pages → Branch: main / root → Save
 
 ## todo
 
-- [ ] 도메인 확정 후 `[도메인입력필요]` 전체 교체
-- [ ] `og:image` 대표 이미지 설정 (SNS 공유 시 썸네일)
-- [ ] 리뷰 사진 추가되면 `images/reviews/` 업데이트
-- [ ] 네이버 서치어드바이저 등록 + sitemap 제출
-- [ ] 네이버 스마트플레이스 등록
+- [ ] 도메인 확정 후 `[도메인입력필요]` 전체 교체 (og:url, og:image, JSON-LD url)
+- [ ] 네이버 서치어드바이저 등록 + sitemap 제출 (도메인 연결 후)
 - [ ] Google Search Console 등록 (도메인 연결 후)
-- [ ] 카카오맵 업체 등록
 
 ---
 
