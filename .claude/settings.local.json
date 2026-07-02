@@ -32,7 +32,10 @@
       "Bash(mv works/5.jpg  gallery/acoustic-detect.jpg)",
       "Bash(git *)",
       "PowerShell(Move-Item *)",
-      "Bash(python3 -c ' *)"
+      "Bash(python3 -c ' *)",
+      "Bash(curl -sI https://nusoo6422.co.kr/sitemap.xml --max-time 10)",
+      "Bash(openssl s_client -connect nusoo6422.co.kr:443 -servername nusoo6422.co.kr)",
+      "Bash(openssl x509 *)"
     ]
   }
 }
