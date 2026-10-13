@@ -20,7 +20,7 @@
 
 - **HTML5 / CSS3 / Vanilla JS** — 빌드 툴 없음, 정적 사이트
 - **GitHub Pages** — 무료 호스팅, HTTPS 자동
-- SEO: JSON-LD (LocalBusiness 스키마), OG 태그
+- SEO: JSON-LD (Plumber 스키마), OG 태그, canonical
 
 CMS·프레임워크 미사용.
 
@@ -113,7 +113,9 @@ GitHub → Settings → Pages → Branch: main / root → Save
 
 ## SEO
 
-- JSON-LD LocalBusiness 스키마 적용 (`@type: LocalBusiness`)
-- OG 태그 (title, description, type, locale)
+- JSON-LD Plumber(LocalBusiness 하위) 스키마 적용 (`@type: Plumber`)
+- `<link rel="canonical">` → `https://nusoo6422.co.kr/` (`/index.html` 중복 URL 방지)
+- OG 태그 (title, description, type, locale, 1200×630 `images/og-image.jpg`)
+- 전환 추적: GA4 이벤트 `call_click` / `kakao_click` (`link_location` = 클릭 위치 섹션 id)
 - 모바일 퍼스트, `word-break: keep-all` 한국어 최적화
 - 이미지 `loading="lazy"`, `alt` 텍스트 전체 적용

@@ -68,6 +68,17 @@
     });
   }
 
+  // Conversion tracking: phone / kakao clicks → GA4 events
+  document.querySelectorAll('a[href^="tel:"], a[href*="open.kakao.com"]').forEach(function (link) {
+    link.addEventListener('click', function () {
+      if (typeof gtag !== 'function') return;
+      var area = this.closest('[id]');
+      gtag('event', this.href.indexOf('tel:') === 0 ? 'call_click' : 'kakao_click', {
+        link_location: area ? area.id : 'unknown'
+      });
+    });
+  });
+
   // Desktop: copy phone number to clipboard on click
   if (window.matchMedia('(pointer: fine)').matches) {
     var toast = document.createElement('div');

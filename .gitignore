@@ -12,6 +12,9 @@ desktop.ini
 # Session reports
 session-report-*.html
 
+# Serena
+.serena/
+
 # Debug screenshots
 images/debug/
 
