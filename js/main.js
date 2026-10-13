@@ -45,10 +45,41 @@
     var cardStep = 274; // 260px card + 14px gap
     document.querySelector('.review-arrow-prev').addEventListener('click', function () {
       reviewScroll.scrollBy({ left: -cardStep, behavior: 'smooth' });
+      startAutoReview();
     });
     document.querySelector('.review-arrow-next').addEventListener('click', function () {
       reviewScroll.scrollBy({ left: cardStep, behavior: 'smooth' });
+      startAutoReview();
     });
+
+    // Auto-advance one card every 5s; back to the first card at the end.
+    // Pauses while hovered, off-screen, or the lightbox is open; manual input restarts the 5s wait.
+    var autoReview = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var autoTimer, hovering = false, inView = true;
+    var startAutoReview = function () {
+      clearInterval(autoTimer);
+      if (!autoReview) return;
+      autoTimer = setInterval(function () {
+        if (hovering || !inView || document.hidden ||
+            document.documentElement.classList.contains('lightbox-open')) return;
+        var atEnd = reviewScroll.scrollLeft + reviewScroll.clientWidth >= reviewScroll.scrollWidth - 4;
+        reviewScroll.scrollTo({ left: atEnd ? 0 : reviewScroll.scrollLeft + cardStep, behavior: 'smooth' });
+      }, 5000);
+    };
+    if (autoReview) {
+      if (window.matchMedia('(hover: hover)').matches) {
+        var reviewWrap = reviewScroll.parentElement;
+        reviewWrap.addEventListener('mouseenter', function () { hovering = true; });
+        reviewWrap.addEventListener('mouseleave', function () { hovering = false; startAutoReview(); });
+      }
+      reviewScroll.addEventListener('touchstart', startAutoReview, { passive: true });
+      if ('IntersectionObserver' in window) {
+        new IntersectionObserver(function (entries) {
+          inView = entries[0].isIntersecting;
+        }).observe(reviewScroll);
+      }
+      startAutoReview();
+    }
   }
 
   // Review lightbox: click/tap a review to view it large

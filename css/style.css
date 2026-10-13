@@ -751,6 +751,7 @@ html.lightbox-open { overflow: hidden; }
   transition: transform var(--trans);
 }
 .contact-btn:active { transform: scale(.97); }
+.contact-btn svg { flex-shrink: 0; }
 
 .contact-btn-call { background: var(--orange); color: var(--white); }
 .contact-btn-call:hover { background: var(--orange-dark); }
@@ -980,7 +981,7 @@ html.lightbox-open { overflow: hidden; }
   .area-wrap { grid-template-columns: 3fr 2fr; gap: 48px; }
 
   .contact-btns { flex-direction: row; justify-content: center; }
-  .contact-btn { max-width: 320px; }
+  .contact-btn { max-width: 340px; padding: 18px 22px; }
 
   .footer-inner { flex-direction: row; justify-content: space-between; align-items: flex-start; }
 }
