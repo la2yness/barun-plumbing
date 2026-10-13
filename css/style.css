@@ -909,7 +909,6 @@ button { cursor: pointer; border: none; background: none; }
   .float-btn { justify-content: center; border-radius: var(--radius-sm); padding: 10px 8px; }
   .float-btn:hover { transform: none; }
   .float-call {
-    order: -1;
     flex: 1.6 1 0;
     display: grid;
     grid-template-columns: auto auto;
@@ -1166,8 +1165,13 @@ button { cursor: pointer; border: none; background: none; }
   transition: background var(--trans);
 }
 .review-arrow:hover { background: var(--blue-light); }
-.review-arrow-prev { left: -22px; }
-.review-arrow-next { right: -22px; }
+/* 화살표는 container 좌우 패딩(1024 미만 20px / 이상 32px) 안쪽까지만 돌출 */
+.review-arrow-prev { left: -12px; }
+.review-arrow-next { right: -12px; }
+@media (min-width: 1024px) {
+  .review-arrow-prev { left: -22px; }
+  .review-arrow-next { right: -22px; }
+}
 @media (hover: hover) and (pointer: fine) {
   .review-arrow { display: flex; }
 }
