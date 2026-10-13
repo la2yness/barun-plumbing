@@ -448,14 +448,59 @@ button { cursor: pointer; border: none; background: none; }
   padding-bottom: 4px;
 }
 .review-scroll::-webkit-scrollbar { display: none; }
+/* 칸 크기 고정: 가장 긴 후기(1080×1813) 비율. 짧은 이미지는 비율 유지한 채 위쪽 정렬 */
 .review-scroll img {
   flex-shrink: 0;
   width: 260px;
   height: auto;
+  aspect-ratio: 1080 / 1813;
+  object-fit: contain;
+  object-position: top;
+  background: var(--white);
   border-radius: var(--radius);
   border: 1px solid var(--line);
   box-shadow: var(--shadow);
+  cursor: zoom-in;
 }
+
+/* 후기 크게 보기 (dialog) */
+.lightbox {
+  margin: auto;
+  padding: 0;
+  border: none;
+  border-radius: var(--radius);
+  background: var(--white);
+  width: min(94vw, 600px);
+  max-width: none;
+  max-height: 92vh;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0,0,0,.35);
+}
+.lightbox::backdrop { background: rgba(10,15,30,.75); }
+.lightbox-body {
+  max-height: 92vh;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.lightbox-body img { width: 100%; height: auto; }
+.lightbox-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(17,24,39,.8);
+  color: var(--white);
+  font-size: 26px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.lightbox-close:hover { background: rgba(17,24,39,.95); }
+html.lightbox-open { overflow: hidden; }
 .review-arrow {
   display: none;
   position: absolute;
@@ -773,10 +818,7 @@ button { cursor: pointer; border: none; background: none; }
   .site-footer .footer-inner { padding-top: 56px; padding-bottom: 40px; }
 }
 @media (min-width: 1024px) {
-  .site-footer .footer-inner { padding-top: 64px; padding-bottom: 48px; }
-}
-@media (min-width: 1440px) {
-  .site-footer .footer-inner { padding-top: 96px; padding-bottom: 64px; }
+  .site-footer .footer-inner { padding-top: 48px; padding-bottom: 36px; }
 }
 .footer-logo {
   font-size: 20px;

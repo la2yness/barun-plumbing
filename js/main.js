@@ -51,6 +51,32 @@
     });
   }
 
+  // Review lightbox: click/tap a review to view it large
+  var lightbox = document.getElementById('review-lightbox');
+  if (reviewScroll && lightbox && lightbox.showModal) {
+    var lightboxBody = lightbox.querySelector('.lightbox-body');
+    var lightboxImg = lightboxBody.querySelector('img');
+    var openLightbox = function (img) {
+      lightboxImg.src = img.src;
+      lightboxImg.alt = img.alt;
+      document.documentElement.classList.add('lightbox-open');
+      lightbox.showModal();
+      lightboxBody.scrollTop = 0;
+    };
+    reviewScroll.querySelectorAll('img').forEach(function (img) {
+      img.setAttribute('tabindex', '0');
+      img.setAttribute('role', 'button');
+      img.addEventListener('click', function () { openLightbox(img); });
+      img.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openLightbox(img); }
+      });
+    });
+    lightbox.querySelector('.lightbox-close').addEventListener('click', function () { lightbox.close(); });
+    // Click on the backdrop (outside the dialog box) closes it
+    lightbox.addEventListener('click', function (e) { if (e.target === lightbox) lightbox.close(); });
+    lightbox.addEventListener('close', function () { document.documentElement.classList.remove('lightbox-open'); });
+  }
+
   // Conversion tracking: phone / kakao clicks → GA4 events
   document.querySelectorAll('a[href^="tel:"], a[href*="open.kakao.com"]').forEach(function (link) {
     link.addEventListener('click', function () {
