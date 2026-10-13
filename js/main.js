@@ -39,23 +39,6 @@
     });
   });
 
-  // Simple fade-in on scroll for section-head elements
-  const observer = new IntersectionObserver(function (entries) {
-    entries.forEach(function (entry) {
-      if (entry.isIntersecting) {
-        entry.target.style.opacity = '1';
-        entry.target.style.transform = 'translateY(0)';
-      }
-    });
-  }, { threshold: 0.15 });
-
-  document.querySelectorAll('.section-head, .service-card, .feature-item, .process-step').forEach(function (el) {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(24px)';
-    el.style.transition = 'opacity .5s ease, transform .5s ease';
-    observer.observe(el);
-  });
-
   // Review scroll arrows
   var reviewScroll = document.querySelector('.review-scroll');
   if (reviewScroll) {

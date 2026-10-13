@@ -89,20 +89,19 @@
 
     <nav class="main-nav" id="main-nav">
       <ul>
+        <li><a href="#symptoms">증상별 안내</a></li>
         <li><a href="#services">서비스</a></li>
-        <li><a href="#gallery">갤러리·후기</a></li>
-        <li><a href="#features">특장점</a></li>
+        <li><a href="#gallery">현장·후기</a></li>
         <li><a href="#pricing">요금안내</a></li>
         <li><a href="#area">서비스지역</a></li>
         <li><a href="#faq">FAQ</a></li>
-        <li><a href="#contact" class="nav-cta">무료상담</a></li>
       </ul>
     </nav>
 
     <div class="header-right">
-      <a href="tel:010-5864-6422" class="header-phone">
+      <a href="tel:010-5864-6422" class="header-cta">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.89 10.2 19.79 19.79 0 01.82 1.53A2 2 0 012.8 0h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.29 6.29l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 14.92v2z"/></svg>
-        <span>010-5864-6422</span>
+        <span>무료상담</span>
       </a>
       <button class="nav-toggle" id="nav-toggle" aria-label="메뉴" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -114,31 +113,16 @@
 <!-- ===================== HERO ===================== -->
 <section class="hero" id="home">
   <div class="container hero-content">
-    <p class="hero-badge">24시간 연중무휴 · 서울 전지역 · 경기 일부</p>
-    <h1>서울 누수탐지 · 배관수리<br><em>바른누수센터</em></h1>
-    <div class="hero-points">
-      <div class="hero-point">
-        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        <div>
-          <strong>무조건 현장 방문</strong>
-          <span>전화 한 통이면 바로 출동</span>
-        </div>
-      </div>
-      <div class="hero-point">
-        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-        <div>
-          <strong>1시간 이내 방문</strong>
-          <span>서울 전지역 신속 출동</span>
-        </div>
-      </div>
-      <div class="hero-point">
-        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-        <div>
-          <strong>출장비 0원</strong>
-          <span>서울·경기 일부 무료</span>
-        </div>
-      </div>
-    </div>
+    <p class="hero-meta">24시간 연중무휴 · 서울 전지역 · 경기 일부</p>
+    <h1>
+      <span class="hero-kicker">서울 누수탐지 · 배관수리 <strong>바른누수센터</strong></span>
+      <span class="hero-title">새는 곳부터 정확히 찾고,<br>필요한 공사만 합니다</span>
+    </h1>
+    <ul class="hero-checks">
+      <li>무조건 현장 방문</li>
+      <li>서울 1시간 이내 도착</li>
+      <li>출장비 0원</li>
+    </ul>
     <div class="hero-btns">
       <a href="tel:010-5864-6422" class="btn btn-accent btn-lg btn-call">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.89 10.2 19.79 19.79 0 01.82 1.53A2 2 0 012.8 0h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.29 6.29l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 14.92v2z"/></svg>
@@ -152,177 +136,163 @@
       </a>
     </div>
   </div>
-  <div class="hero-wave">
-    <svg viewBox="0 0 1440 72" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0,32L60,37.3C120,43,240,53,360,53.3C480,53,600,43,720,37.3C840,32,960,32,1080,37.3C1200,43,1320,53,1380,58.7L1440,64L1440,72L0,72Z" fill="#ffffff"/>
-    </svg>
-  </div>
 </section>
 
-<!-- ===================== SLOGAN ===================== -->
-<div class="slogan-bar">
+<!-- ===================== STATS ===================== -->
+<div class="stats">
   <div class="container">
-    <p>"과한 공사보다 <strong>정확한 원인 파악</strong>을 먼저 &mdash; 필요한 작업만 사전 안내 후 진행합니다"</p>
+    <ul class="stats-list">
+      <li><strong>월 80가구+</strong><span>평균 시공 실적</span></li>
+      <li><strong>10년+ 경력</strong><span>숙련 기술자 직영 운영</span></li>
+      <li><strong>6종 탐지 장비</strong><span>열화상·청음·가스·내시경</span></li>
+      <li><strong>1년 A/S</strong><span>동일 부위 무상 보증</span></li>
+    </ul>
   </div>
 </div>
 
-<!-- ===================== GUARANTEE ===================== -->
-<div class="guarantee-bar">
-  <div class="container">
-    <div class="guarantee-items">
-      <div class="guarantee-item">
-        <div class="g-icon">✓</div>
-        <div>
-          <strong>전화 한 통이면 직접 와서 봅니다</strong>
-          <span>추측 견적 대신, 현장에서 원인을 확인한 뒤 정확히 안내드립니다</span>
-        </div>
-      </div>
-      <div class="g-divider"></div>
-      <div class="guarantee-item">
-        <div class="g-icon">✓</div>
-        <div>
-          <strong>시공 + 점검 함께</strong>
-          <span>단순 수리에 그치지 않고, 연관 배관 상태도 현장에서 함께 살펴드립니다</span>
-        </div>
-      </div>
+<!-- ===================== SYMPTOMS ===================== -->
+<section class="section section-alt" id="symptoms">
+  <div class="container symptoms">
+    <div class="section-head">
+      <h2>이런 증상 있으세요?</h2>
+      <p>어디가 문제인지 몰라도 괜찮습니다. 증상만 말씀해 주시면 현장에서 원인을 찾아드립니다.</p>
     </div>
+    <ul class="symptom-list">
+      <li>
+        <strong>아랫집에서 물이 샌다고 연락이 왔어요</strong>
+        <span>층간 누수 탐지 — 청음·열화상 장비로 새는 위치부터 확인합니다</span>
+      </li>
+      <li>
+        <strong>수도요금이 갑자기 많이 나왔어요</strong>
+        <span>미세 누수 탐지 — 공압 검사로 보이지 않는 배관 누수를 찾습니다</span>
+      </li>
+      <li>
+        <strong>천장이나 벽에 얼룩·곰팡이가 생겼어요</strong>
+        <span>천장 누수 탐지 — 누수인지 결로인지 원인부터 구분합니다</span>
+      </li>
+      <li>
+        <strong>바닥이 축축하거나 보일러 물이 자꾸 줄어요</strong>
+        <span>난방배관 · 장판 밑 누수 점검 — 열화상 카메라로 배관 경로를 확인합니다</span>
+      </li>
+      <li>
+        <strong>변기·싱크대·하수구가 막혔어요</strong>
+        <span>막힘 해결 — 필요하면 내시경 확인과 고압세척까지 진행합니다</span>
+      </li>
+      <li>
+        <strong>화장실이나 배수구에서 냄새가 올라와요</strong>
+        <span>악취 원인 점검 — 트랩·폼업·배수구 상태를 살펴봅니다</span>
+      </li>
+      <li>
+        <strong>수전·세면대·변기가 새거나 고장 났어요</strong>
+        <span>위생기기 수리·교체 — 수전, 앵글밸브, 고압호스, 변기 부속까지</span>
+      </li>
+      <li>
+        <strong>겨울에 수도가 얼어서 물이 안 나와요</strong>
+        <span>동파 해빙 — 해빙 후 배관 손상 여부도 함께 점검합니다</span>
+      </li>
+    </ul>
+    <a href="tel:010-5864-6422" class="btn btn-accent btn-lg btn-call symptoms-cta">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.89 10.2 19.79 19.79 0 01.82 1.53A2 2 0 012.8 0h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.29 6.29l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 14.92v2z"/></svg>
+      <span class="btn-call-text">
+        <span class="btn-call-label">증상만 말씀해 주세요</span>
+        <span class="btn-call-num">010-5864-6422</span>
+      </span>
+    </a>
   </div>
-</div>
-
-<!-- ===================== TRUST STRIP ===================== -->
-<div class="trust-strip">
-  <div class="container">
-    <div class="trust-items">
-      <div class="trust-item">
-        <strong>월 80가구+</strong>
-        <span>평균 시공 실적</span>
-      </div>
-      <div class="trust-sep"></div>
-      <div class="trust-item">
-        <strong>10년+ 경력</strong>
-        <span>숙련 기술자 직영 운영</span>
-      </div>
-      <div class="trust-sep"></div>
-      <div class="trust-item">
-        <strong>6종 탐지 장비</strong>
-        <span>열화상·청음·가스·내시경</span>
-      </div>
-      <div class="trust-sep"></div>
-      <div class="trust-item">
-        <strong>1년 A/S</strong>
-        <span>동일 부위 무상 보증</span>
-      </div>
-    </div>
-  </div>
-</div>
+</section>
 
 <!-- ===================== SERVICES ===================== -->
 <section class="section" id="services">
   <div class="container">
     <div class="section-head">
       <h2>제공 서비스</h2>
-      <p>누수탐지부터 설비 전반까지 전문적으로 해결합니다</p>
+      <p>누수탐지부터 설비 전반까지, 직접 방문해 시공합니다</p>
     </div>
     <div class="service-grid">
 
-      <div class="service-card">
-        <div class="svc-icon blue">
-          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 2.69l5.66 5.66a8 8 0 11-11.31 0z"/>
-          </svg>
+      <article class="service-card">
+        <img src="images/gallery/acoustic-detect.jpg" alt="청음 장비로 누수를 탐지하는 모습" class="service-photo" loading="lazy">
+        <div class="service-body">
+          <h3>누수탐지</h3>
+          <p class="service-desc">수도·천장·배관 누수를 최신 장비로 정밀 탐지합니다</p>
+          <ul>
+            <li>수도누수 수리</li>
+            <li>천장 누수 탐지·공사</li>
+            <li>배관 누수 공사</li>
+            <li>최신 장비 정밀 탐지</li>
+          </ul>
         </div>
-        <h3>누수탐지</h3>
-        <p>수도·천장·배관 누수를 최신 장비로 정밀 탐지합니다</p>
-        <ul>
-          <li>수도누수 수리</li>
-          <li>천장 누수 탐지·공사</li>
-          <li>배관 누수 공사</li>
-          <li>최신 장비 정밀 탐지</li>
-        </ul>
-      </div>
+      </article>
 
-      <div class="service-card">
-        <div class="svc-icon orange">
-          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M22 3H2l8 9.46V19l4 2V12.46L22 3z"/>
-          </svg>
+      <article class="service-card">
+        <img src="images/gallery/bathroom-pipe.jpg" alt="욕실 배수구를 내시경으로 점검하는 모습" class="service-photo" loading="lazy">
+        <div class="service-body">
+          <h3>막힘 해결</h3>
+          <p class="service-desc">하수구·변기·싱크대·욕실 배수 문제를 빠르게 처리합니다</p>
+          <ul>
+            <li>하수구 막힘</li>
+            <li>변기 막힘</li>
+            <li>싱크대 막힘</li>
+            <li>욕실 배수 문제</li>
+          </ul>
         </div>
-        <h3>막힘 해결</h3>
-        <p>하수구·변기·싱크대·욕실 배수 문제를 빠르게 처리합니다</p>
-        <ul>
-          <li>하수구 막힘</li>
-          <li>변기 막힘</li>
-          <li>싱크대 막힘</li>
-          <li>욕실 배수 문제</li>
-        </ul>
-      </div>
+      </article>
 
-      <div class="service-card">
-        <div class="svc-icon blue">
-          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/>
-          </svg>
+      <article class="service-card">
+        <img src="images/gallery/pipe-replacement.jpg" alt="노후 배관을 새 배관으로 교체한 모습" class="service-photo" loading="lazy">
+        <div class="service-body">
+          <h3>배관 공사</h3>
+          <p class="service-desc">수도배관 교체·스케일링·동파해빙 등 배관 전반을 담당합니다</p>
+          <ul>
+            <li>수도배관 교체</li>
+            <li>수압 관련 문제</li>
+            <li>배관 스케일링</li>
+            <li>동파 및 해빙 작업</li>
+          </ul>
         </div>
-        <h3>배관 공사</h3>
-        <p>수도배관 교체·스케일링·동파해빙 등 배관 전반을 담당합니다</p>
-        <ul>
-          <li>수도배관 교체</li>
-          <li>수압 관련 문제</li>
-          <li>배관 스케일링</li>
-          <li>동파 및 해빙 작업</li>
-        </ul>
-      </div>
+      </article>
 
-      <div class="service-card">
-        <div class="svc-icon orange">
-          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="3"/>
-            <path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/>
-          </svg>
+      <article class="service-card">
+        <img src="images/gallery/toilet-repair.jpg" alt="변기를 수리하는 모습" class="service-photo" loading="lazy">
+        <div class="service-body">
+          <h3>위생기기</h3>
+          <p class="service-desc">수전·세면대·변기·배수트랩 수리 및 교체 작업을 진행합니다</p>
+          <ul>
+            <li>수전교체</li>
+            <li>세면대 수리·교체</li>
+            <li>변기 수리·교체</li>
+            <li>폼업·배수트랩·앵글밸브</li>
+          </ul>
         </div>
-        <h3>위생기기</h3>
-        <p>수전·세면대·변기·배수트랩 수리 및 교체 작업을 진행합니다</p>
-        <ul>
-          <li>수전교체</li>
-          <li>세면대 수리·교체</li>
-          <li>변기 수리·교체</li>
-          <li>폼업·배수트랩·앵글밸브</li>
-        </ul>
-      </div>
+      </article>
 
-      <div class="service-card">
-        <div class="svc-icon blue">
-          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
-            <polyline points="9 22 9 12 15 12 15 22"/>
-          </svg>
+      <article class="service-card">
+        <img src="images/gallery/water-sewage.jpg" alt="욕실 바닥 배관을 새로 시공한 모습" class="service-photo" loading="lazy">
+        <div class="service-body">
+          <h3>욕실·베란다</h3>
+          <p class="service-desc">욕실 공사, 베란다·우수관, 공용배관 등 시설 전반을 처리합니다</p>
+          <ul>
+            <li>욕실 공사</li>
+            <li>베란다 및 우수관</li>
+            <li>공용배관 막힘</li>
+            <li>고압호스 교체</li>
+          </ul>
         </div>
-        <h3>욕실·베란다</h3>
-        <p>욕실 공사, 베란다·우수관, 공용배관 등 시설 전반을 처리합니다</p>
-        <ul>
-          <li>욕실 공사</li>
-          <li>베란다 및 우수관</li>
-          <li>공용배관 막힘</li>
-          <li>고압호스 교체</li>
-        </ul>
-      </div>
+      </article>
 
-      <div class="service-card">
-        <div class="svc-icon orange">
-          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="2" y="7" width="20" height="14" rx="2"/>
-            <path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/>
-          </svg>
+      <article class="service-card">
+        <img src="images/gallery/high-pressure-wash.jpg" alt="고압세척 장비" class="service-photo" loading="lazy">
+        <div class="service-body">
+          <h3>상가·사무실</h3>
+          <p class="service-desc">아파트·빌라·상가·오피스텔·호텔 등 모든 현장에 대응합니다</p>
+          <ul>
+            <li>상가·사무실 설비 유지보수</li>
+            <li>수압 관련 문제</li>
+            <li>다양한 현장 긴급 출동</li>
+            <li>정기 점검 상담 가능</li>
+          </ul>
         </div>
-        <h3>상가·사무실</h3>
-        <p>아파트·빌라·상가·오피스텔·호텔 등 모든 현장에 대응합니다</p>
-        <ul>
-          <li>상가·사무실 설비 유지보수</li>
-          <li>수압 관련 문제</li>
-          <li>다양한 현장 긴급 출동</li>
-          <li>정기 점검 상담 가능</li>
-        </ul>
-      </div>
+      </article>
 
     </div>
   </div>
@@ -332,58 +302,34 @@
 <section class="section section-alt" id="gallery">
   <div class="container">
     <div class="section-head">
-      <h2>시공 현장</h2>
+      <h2>현장에서 직접 쓰는 장비</h2>
       <p>열화상 카메라 · 청음 탐지기 · 관로 탐지기 · 내시경 카메라 · 가스 탐지기 · 공압 검사 · 고압세척 장비 보유</p>
     </div>
     <div class="gallery-grid">
-      <div class="gallery-item">
-        <img src="images/gallery/thermal-leak.jpg" alt="열화상 카메라" loading="lazy">
-        <div class="gallery-overlay"><span>열화상 카메라</span></div>
-      </div>
-      <div class="gallery-item">
-        <img src="images/gallery/boiler-thermal.jpg" alt="보일러 점검" loading="lazy">
-        <div class="gallery-overlay"><span>보일러 점검</span></div>
-      </div>
-      <div class="gallery-item">
-        <img src="images/gallery/acoustic-detect.jpg" alt="청음 탐지" loading="lazy">
-        <div class="gallery-overlay"><span>청음 탐지</span></div>
-      </div>
-      <div class="gallery-item">
-        <img src="images/gallery/floor-thermal.jpg" alt="난방배관 검사" loading="lazy">
-        <div class="gallery-overlay"><span>난방배관 검사</span></div>
-      </div>
-      <div class="gallery-item">
-        <img src="images/gallery/gas-pressure.jpg" alt="가스 탐지 장비 공압 검사" loading="lazy">
-        <div class="gallery-overlay"><span>가스 탐지 · 공압 검사</span></div>
-      </div>
-      <div class="gallery-item">
-        <img src="images/gallery/endoscope.jpg" alt="내시경 카메라" loading="lazy">
-        <div class="gallery-overlay"><span>내시경 카메라</span></div>
-      </div>
-      <div class="gallery-item">
-        <img src="images/gallery/bathroom-pipe.jpg" alt="하수 배관 점검" loading="lazy">
-        <div class="gallery-overlay"><span>하수 배관 점검</span></div>
-      </div>
-      <div class="gallery-item">
+      <figure class="gallery-item">
+        <img src="images/gallery/thermal-leak.jpg" alt="열화상 카메라로 누수를 확인하는 모습" loading="lazy">
+        <figcaption>열화상 카메라</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <img src="images/gallery/floor-thermal.jpg" alt="열화상 카메라로 난방배관을 검사하는 모습" loading="lazy">
+        <figcaption>난방배관 검사</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <img src="images/gallery/boiler-thermal.jpg" alt="보일러 배관 열화상 점검" loading="lazy">
+        <figcaption>보일러 점검</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <img src="images/gallery/gas-pressure.jpg" alt="가스 탐지 장비와 공압 검사 장비" loading="lazy">
+        <figcaption>가스 탐지 · 공압 검사</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <img src="images/gallery/endoscope.jpg" alt="배관 내시경 카메라" loading="lazy">
+        <figcaption>내시경 카메라</figcaption>
+      </figure>
+      <figure class="gallery-item">
         <img src="images/gallery/pipe-excavation.jpg" alt="배관 공사 현장" loading="lazy">
-        <div class="gallery-overlay"><span>배관 공사 현장</span></div>
-      </div>
-      <div class="gallery-item">
-        <img src="images/gallery/toilet-repair.jpg" alt="변기 수리 작업" loading="lazy">
-        <div class="gallery-overlay"><span>변기 수리 작업</span></div>
-      </div>
-      <div class="gallery-item">
-        <img src="images/gallery/water-sewage.jpg" alt="상, 하수도 설비" loading="lazy">
-        <div class="gallery-overlay"><span>상, 하수도 설비</span></div>
-      </div>
-      <div class="gallery-item">
-        <img src="images/gallery/pipe-replacement.jpg" alt="노후배관 교체" loading="lazy">
-        <div class="gallery-overlay"><span>노후배관 교체</span></div>
-      </div>
-      <div class="gallery-item">
-        <img src="images/gallery/high-pressure-wash.jpg" alt="고압세척" loading="lazy">
-        <div class="gallery-overlay"><span>고압세척</span></div>
-      </div>
+        <figcaption>배관 공사 현장</figcaption>
+      </figure>
     </div>
   </div>
 </section>
@@ -421,169 +367,29 @@
   </div>
 </section>
 
-<!-- ===================== WORK ITEMS ===================== -->
-<section class="section section-alt" id="workitems">
-  <div class="container">
-    <div class="section-head">
-      <h2>작업 가능 항목</h2>
-      <p>주방부터 하수구까지, 집 안 설비 문제를 한 번에 해결합니다</p>
-    </div>
-    <div class="wi-grid">
-
-      <div class="wi-card">
-        <div class="wi-head wi-blue">주방</div>
-        <ul>
-          <li>수전 · 수도꼭지 교체</li>
-          <li>고압호스 · 앵글밸브</li>
-          <li>싱크대 배수트랩 · 막힘</li>
-          <li>배수호스 · 누수 점검</li>
-        </ul>
-      </div>
-
-      <div class="wi-card">
-        <div class="wi-head wi-cyan">화장실</div>
-        <ul>
-          <li>세면대 수전 · 샤워수전</li>
-          <li>변기 부속 · 막힘 해결</li>
-          <li>트랩 · 폼업 · 배수구 악취</li>
-          <li>욕실 · 천장 누수 점검</li>
-        </ul>
-      </div>
-
-      <div class="wi-card">
-        <div class="wi-head wi-blue">베란다 · 세탁실</div>
-        <ul>
-          <li>세탁기 수전 · 수도꼭지</li>
-          <li>배수 문제 해결</li>
-          <li>베란다 · 우수관 누수</li>
-          <li>동파 및 누수 수리</li>
-        </ul>
-      </div>
-
-      <div class="wi-card">
-        <div class="wi-head wi-cyan">거실 · 방</div>
-        <ul>
-          <li>천장 누수 점검</li>
-          <li>보일러 배관 누수</li>
-          <li>장판 밑 누수 점검</li>
-          <li>벽면 · 결로 원인 확인</li>
-        </ul>
-      </div>
-
-      <div class="wi-card">
-        <div class="wi-head wi-blue">하수구 · 배관</div>
-        <ul>
-          <li>하수구 막힘 · 역류</li>
-          <li>고압세척 · 악취 원인 점검</li>
-          <li>공용배관 막힘</li>
-          <li>배관 누수 · 배수 불량</li>
-        </ul>
-      </div>
-
-      <div class="wi-card">
-        <div class="wi-head wi-cyan">정밀 탐지 · 설비</div>
-        <ul>
-          <li>누수탐지 · 공압검사</li>
-          <li>청음탐지 · 가스탐지</li>
-          <li>수도 · 하수 배관 수리</li>
-          <li>각종 설비 교체 · 점검</li>
-        </ul>
-      </div>
-
-    </div>
-  </div>
-</section>
-
 <!-- ===================== FEATURES ===================== -->
-<section class="section" id="features">
+<section class="section section-alt" id="features">
   <div class="container">
     <div class="section-head">
-      <h2>왜 바른누수센터인가요?</h2>
-      <p>고객이 신뢰하는 6가지 이유</p>
+      <h2>바른누수센터가 다른 점</h2>
+      <p>과한 공사보다 정확한 원인 파악을 먼저 합니다</p>
     </div>
-    <div class="features-grid">
-      <div class="feature-item">
-        <div class="feat-num">01</div>
-        <div class="feat-body">
-          <h3>1시간 이내 방문 · 24시간 연중무휴</h3>
-          <p>전화 한 통이면 서울 전지역, 경기 일부까지 1시간 이내 현장 도착. 야간·공휴일 관계없이 연중무휴 운영합니다.</p>
-        </div>
+    <div class="feature-grid">
+      <div class="feature">
+        <h3>전화 한 통이면<br>직접 와서 봅니다</h3>
+        <p>추측 견적 대신, 현장에서 원인을 확인한 뒤 정확히 안내드립니다. 서울은 1시간 이내, 야간·공휴일에도 출동합니다.</p>
       </div>
-      <div class="feature-item">
-        <div class="feat-num">02</div>
-        <div class="feat-body">
-          <h3>10년 이상의 현장 경험</h3>
-          <p>다양한 유형의 누수·배관 문제를 해결한 풍부한 현장 경험으로 빠르고 정확하게 원인을 파악합니다.</p>
-        </div>
+      <div class="feature">
+        <h3>본사 직영,<br>같은 기술자가 끝까지</h3>
+        <p>하청 없이 직접 운영합니다. 상담부터 시공 마무리까지 같은 전문 인력이 책임지고 진행합니다.</p>
       </div>
-      <div class="feature-item">
-        <div class="feat-num">03</div>
-        <div class="feat-body">
-          <h3>본사 직영 · 확실한 작업 책임</h3>
-          <p>하청 없이 본사 직영으로 운영합니다. 작업의 처음부터 끝까지 동일한 전문 인력이 책임지고 진행합니다.</p>
-        </div>
+      <div class="feature">
+        <h3>고치는 김에<br>연관 배관까지 점검</h3>
+        <p>단순 수리에 그치지 않고, 연관 배관 상태도 현장에서 함께 살펴드립니다.</p>
       </div>
-      <div class="feature-item">
-        <div class="feat-num">04</div>
-        <div class="feat-body">
-          <h3>불필요한 공사 없음 · 사전 동의 후 진행</h3>
-          <p>정확한 원인 파악을 우선으로 하며, 필요한 작업과 비용을 미리 안내하고 고객 동의 후에만 작업합니다.</p>
-        </div>
-      </div>
-      <div class="feature-item">
-        <div class="feat-num">05</div>
-        <div class="feat-body">
-          <h3>다양한 현장 대응 가능</h3>
-          <p>아파트, 빌라, 상가, 오피스텔, 호텔 등 주거·상업 공간을 가리지 않고 모든 유형의 현장에 대응합니다.</p>
-        </div>
-      </div>
-      <div class="feature-item">
-        <div class="feat-num">06</div>
-        <div class="feat-body">
-          <h3>최신 장비 활용 · 정밀 탐지</h3>
-          <p>최신 누수 탐지 장비를 활용하여 벽·바닥을 최소로 훼손하면서 정확한 누수 위치를 찾아냅니다.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== PROCESS ===================== -->
-<section class="section section-alt" id="process">
-  <div class="container">
-    <div class="section-head">
-      <h2>서비스 진행 과정</h2>
-      <p>문의부터 완료까지 투명하게 진행합니다</p>
-    </div>
-    <div class="process-steps">
-      <div class="process-step">
-        <div class="step-circle">1</div>
-        <h3>상담 문의</h3>
-        <p>전화 또는 카카오톡으로 증상을 말씀해 주세요. 24시간 연결됩니다.</p>
-      </div>
-      <div class="process-arrow">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </div>
-      <div class="process-step">
-        <div class="step-circle">2</div>
-        <h3>현장 방문·점검</h3>
-        <p>1시간 이내 현장 도착, 최신 장비로 정밀하게 원인을 파악합니다.</p>
-      </div>
-      <div class="process-arrow">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </div>
-      <div class="process-step">
-        <div class="step-circle">3</div>
-        <h3>사전 안내·동의</h3>
-        <p>작업 내용과 비용을 미리 안내드리고, 동의 후에 진행합니다.</p>
-      </div>
-      <div class="process-arrow">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </div>
-      <div class="process-step">
-        <div class="step-circle">4</div>
-        <h3>공사 진행·완료</h3>
-        <p>전문 기술로 신속하게 처리하고, 완료 후 현장 정리까지 책임집니다.</p>
+      <div class="feature">
+        <h3>시공 부위<br>1년 A/S 보증</h3>
+        <p>시공한 부위에 같은 문제가 생기면 1년 이내 무상으로 A/S 해드립니다.</p>
       </div>
     </div>
   </div>
@@ -593,34 +399,40 @@
 <section class="section" id="pricing">
   <div class="container">
     <div class="section-head">
-      <h2>요금 안내</h2>
+      <h2>요금과 진행 순서</h2>
       <p>현장 점검 후 견적을 먼저 안내드리고, 동의하신 뒤에만 작업합니다</p>
     </div>
-    <div class="price-cards">
-
-      <div class="price-card">
-        <div class="price-amount price-free">0원</div>
-        <h3>출장비</h3>
-        <p>서울 전지역 · 경기 일부<br>방문 출장비 무료</p>
+    <div class="pricing">
+      <div>
+        <h3 class="pricing-sub">진행 순서</h3>
+        <ol class="steps">
+          <li><strong>전화·카카오톡 상담</strong><span>증상을 말씀해 주세요. 24시간 연결됩니다.</span></li>
+          <li><strong>현장 방문·점검</strong><span>1시간 이내 도착, 장비로 원인을 파악합니다.</span></li>
+          <li><strong>견적 안내·동의</strong><span>작업 내용과 비용을 먼저 안내드립니다.</span></li>
+          <li><strong>시공·정리</strong><span>작업 후 현장 정리까지 마무리합니다.</span></li>
+        </ol>
       </div>
-
-      <div class="price-card price-card-main">
-        <div class="price-badge">기본 점검</div>
-        <div class="price-amount">50,000원</div>
-        <h3>현장 점검비</h3>
-        <p>육안 검사 및 원인 파악<br><strong>당일 시공 시 점검비 전액 차감</strong></p>
+      <div>
+        <h3 class="pricing-sub">기본 요금</h3>
+        <dl class="price-list">
+          <div class="price-row">
+            <dt>출장비</dt>
+            <dd class="price">0원</dd>
+            <dd class="desc">서울 전지역 · 경기 일부 방문 무료</dd>
+          </div>
+          <div class="price-row">
+            <dt>현장 점검비</dt>
+            <dd class="price">50,000원</dd>
+            <dd class="desc">육안 검사 및 원인 파악 · <strong>당일 시공 시 전액 차감</strong></dd>
+          </div>
+          <div class="price-row">
+            <dt>단순 교체</dt>
+            <dd class="price">점검비 포함</dd>
+            <dd class="desc">수전 · 앵글밸브 · 수도꼭지 등 부속 교체</dd>
+          </div>
+        </dl>
+        <p class="price-note">현장 상황 · 작업 범위 · 부속 상태에 따라 비용이 달라질 수 있습니다. 점검 후 정확한 견적을 먼저 안내드리며, 고객님 동의 없이 작업을 시작하지 않습니다. 점검 및 원인 파악만 원하시는 경우에도 방문이 가능합니다.</p>
       </div>
-
-      <div class="price-card">
-        <div class="price-amount price-included">점검비<br>포함</div>
-        <h3>단순 교체</h3>
-        <p>수전 · 앵글밸브 · 수도꼭지<br>부속 교체 등 단순 시공</p>
-      </div>
-
-    </div>
-    <div class="price-note">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-      <p>현장 상황 · 작업 범위 · 부속 상태에 따라 비용이 달라질 수 있습니다. 점검 후 정확한 견적을 먼저 안내드리며, 고객님 동의 없이 작업을 시작하지 않습니다. 점검 및 원인 파악만 원하시는 경우에도 방문이 가능합니다.</p>
     </div>
   </div>
 </section>
@@ -634,10 +446,7 @@
     </div>
     <div class="area-wrap">
       <div class="area-block">
-        <h3>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          서울 전지역 (25개 구)
-        </h3>
+        <h3>서울 전지역 (25개 구)</h3>
         <div class="area-tags">
           <span>종로구</span><span>중구</span><span>용산구</span><span>성동구</span>
           <span>광진구</span><span>동대문구</span><span>중랑구</span><span>성북구</span>
@@ -648,11 +457,8 @@
           <span>강동구</span>
         </div>
       </div>
-      <div class="area-block area-block-right">
-        <h3>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          경기 일부 지역
-        </h3>
+      <div class="area-block">
+        <h3>경기 일부 지역</h3>
         <p class="area-note">경기도 일부 지역 출장 가능합니다.<br>지역 여부는 전화로 문의해 주세요.</p>
         <a href="tel:010-5864-6422" class="btn btn-outline">지역 문의하기</a>
       </div>
@@ -660,25 +466,8 @@
   </div>
 </section>
 
-<!-- ===================== A/S ===================== -->
-<div class="as-bar">
-  <div class="container">
-    <div class="as-inner">
-      <div class="as-icon">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-      </div>
-      <div class="as-content">
-        <h3>A/S 보증 안내</h3>
-        <p><strong>해당 시공 부위에 같은 문제 발생 시 1년 이내 A/S 가능</strong></p>
-        <p>작업 후 이상 증상이 생긴 경우 현장 상황 및 작업 내용을 먼저 확인 후 신속하게 안내드립니다. 누수 및 배관 작업은 건물 구조·기존 배관 상태·노후도 등 다양한 변수가 있어 현장 확인이 우선입니다.</p>
-        <p>단순 변심·고객 과실·기존 노후 배관의 추가 문제로 인한 부분은 별도 안내될 수 있습니다.</p>
-      </div>
-    </div>
-  </div>
-</div>
-
 <!-- ===================== FAQ ===================== -->
-<section class="section section-alt" id="faq">
+<section class="section" id="faq">
   <div class="container">
     <div class="section-head">
       <h2>자주 묻는 질문</h2>
