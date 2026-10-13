@@ -308,6 +308,7 @@ button { cursor: pointer; border: none; background: none; }
   font-size: 14px;
   color: var(--muted);
 }
+.stats-list .nowrap { white-space: nowrap; }
 
 /* ================================================================
    SECTIONS
@@ -331,6 +332,8 @@ button { cursor: pointer; border: none; background: none; }
   font-size: 16px;
   color: var(--muted);
 }
+/* 장비 목록 한 줄이 680px에서 어색하게 끊겨서 폭 제한 해제 */
+#gallery .section-head { max-width: none; }
 
 /* ================================================================
    SYMPTOMS
@@ -436,6 +439,16 @@ button { cursor: pointer; border: none; background: none; }
 /* ================================================================
    REVIEWS
    ================================================================ */
+.section-head .review-hint {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--blue);
+}
+.review-hint svg { flex-shrink: 0; }
 .review-scroll-wrap {
   position: relative;
   margin-bottom: 36px;
@@ -500,6 +513,28 @@ button { cursor: pointer; border: none; background: none; }
   justify-content: center;
 }
 .lightbox-close:hover { background: rgba(17,24,39,.95); }
+/* 이전/다음: fixed라 dialog의 overflow에 잘리지 않음. 넓은 화면은 박스(600px) 바깥, 좁은 화면은 화면 가장자리 */
+.lightbox-nav {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  box-shadow: var(--shadow);
+  color: var(--blue-dark);
+  transition: background var(--trans);
+  -webkit-tap-highlight-color: transparent;
+}
+.lightbox-nav:hover { background: var(--blue-light); }
+.lightbox-prev { left: max(8px, calc(50% - 300px - 68px)); }
+.lightbox-next { right: max(8px, calc(50% - 300px - 68px)); }
 html.lightbox-open { overflow: hidden; }
 .review-arrow {
   display: none;

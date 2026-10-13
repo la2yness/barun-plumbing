@@ -87,20 +87,33 @@
   if (reviewScroll && lightbox && lightbox.showModal) {
     var lightboxBody = lightbox.querySelector('.lightbox-body');
     var lightboxImg = lightboxBody.querySelector('img');
-    var openLightbox = function (img) {
-      lightboxImg.src = img.src;
-      lightboxImg.alt = img.alt;
-      document.documentElement.classList.add('lightbox-open');
-      lightbox.showModal();
+    var reviewImgs = reviewScroll.querySelectorAll('img');
+    var currentReview = 0;
+    // Show review i in the lightbox; wraps around at both ends
+    var showReview = function (i) {
+      currentReview = (i + reviewImgs.length) % reviewImgs.length;
+      lightboxImg.src = reviewImgs[currentReview].src;
+      lightboxImg.alt = reviewImgs[currentReview].alt;
       lightboxBody.scrollTop = 0;
     };
-    reviewScroll.querySelectorAll('img').forEach(function (img) {
+    var openLightbox = function (i) {
+      document.documentElement.classList.add('lightbox-open');
+      lightbox.showModal();
+      showReview(i);
+    };
+    reviewImgs.forEach(function (img, i) {
       img.setAttribute('tabindex', '0');
       img.setAttribute('role', 'button');
-      img.addEventListener('click', function () { openLightbox(img); });
+      img.addEventListener('click', function () { openLightbox(i); });
       img.addEventListener('keydown', function (e) {
-        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openLightbox(img); }
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openLightbox(i); }
       });
+    });
+    lightbox.querySelector('.lightbox-prev').addEventListener('click', function () { showReview(currentReview - 1); });
+    lightbox.querySelector('.lightbox-next').addEventListener('click', function () { showReview(currentReview + 1); });
+    lightbox.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowLeft') { e.preventDefault(); showReview(currentReview - 1); }
+      if (e.key === 'ArrowRight') { e.preventDefault(); showReview(currentReview + 1); }
     });
     lightbox.querySelector('.lightbox-close').addEventListener('click', function () { lightbox.close(); });
     // Click on the backdrop (outside the dialog box) closes it
